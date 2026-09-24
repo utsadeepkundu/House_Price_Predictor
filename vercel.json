@@ -1,13 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "vite",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "functions": {
-    "api/index.py": {
+    "app.py": {
       "includeFiles": [
-        "models/**/*.pkl",
-        "public/**/*.json"
+        "models/**/*.pkl"
       ]
     }
   }
