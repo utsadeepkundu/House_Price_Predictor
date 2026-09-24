@@ -1,11 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build",
   "functions": {
     "app.py": {
-      "includeFiles": [
-        "models/**/*.pkl"
-      ]
+      "includeFiles": "models/**/*.pkl"
     }
   }
 }
