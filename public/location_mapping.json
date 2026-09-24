@@ -1,0 +1,30 @@
+{
+  "Bangalore": [
+    "Whitefield",
+    "Electronic City",
+    "HSR Layout",
+    "Indiranagar",
+    "Koramangala"
+  ],
+  "Delhi": [
+    "Dwarka",
+    "Gurgaon DLF",
+    "Noida Sector 62",
+    "Noida Extension",
+    "South Delhi"
+  ],
+  "Hyderabad": [
+    "Banjara Hills",
+    "Kondapur",
+    "Gachibowli",
+    "Jubilee Hills",
+    "Madhapur"
+  ],
+  "Mumbai": [
+    "Bandra",
+    "Powai",
+    "Thane",
+    "Andheri",
+    "Navi Mumbai"
+  ]
+}

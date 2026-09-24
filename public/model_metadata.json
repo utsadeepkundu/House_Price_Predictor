@@ -1,0 +1,142 @@
+{
+    "model_name": "House Price Prediction",
+    "model_type": "Linear Regression",
+    "target": "price_in_lakhs",
+    "features": {
+        "city": {
+            "type": "categorical",
+            "values": [
+                "Bangalore",
+                "Delhi",
+                "Hyderabad",
+                "Mumbai"
+            ]
+        },
+        "locality": {
+            "type": "categorical",
+            "values": [
+                "Andheri",
+                "Bandra",
+                "Banjara Hills",
+                "Dwarka",
+                "Electronic City",
+                "Gachibowli",
+                "Gurgaon DLF",
+                "HSR Layout",
+                "Indiranagar",
+                "Jubilee Hills",
+                "Kondapur",
+                "Koramangala",
+                "Madhapur",
+                "Navi Mumbai",
+                "Noida Extension",
+                "Noida Sector 62",
+                "Powai",
+                "South Delhi",
+                "Thane",
+                "Whitefield"
+            ]
+        },
+        "locality_tier": {
+            "type": "categorical",
+            "values": [
+                "Affordable",
+                "Premium",
+                "Standard"
+            ]
+        },
+        "property_type": {
+            "type": "categorical",
+            "values": [
+                "Apartment",
+                "Independent House",
+                "Penthouse",
+                "Row House",
+                "Studio",
+                "Villa"
+            ]
+        },
+        "bhk": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 3.1522117647058825
+        },
+        "bathrooms": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 6.0,
+            "mean": 3.363364705882353
+        },
+        "balconies": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 4.0,
+            "mean": 1.6840235294117647
+        },
+        "built_up_area": {
+            "type": "numeric",
+            "min": 300.0,
+            "max": 3092.0,
+            "mean": 1573.2936
+        },
+        "carpet_area": {
+            "type": "numeric",
+            "min": 240.0,
+            "max": 2697.0,
+            "mean": 1321.4480470588235
+        },
+        "floor_number": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 39.0,
+            "mean": 9.326870588235295
+        },
+        "total_floors": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 45.0,
+            "mean": 14.435741176470588
+        },
+        "facing": {
+            "type": "categorical",
+            "values": [
+                "East",
+                "North",
+                "North-East",
+                "North-West",
+                "South",
+                "South-East",
+                "South-West",
+                "West"
+            ]
+        },
+        "furnishing_status": {
+            "type": "categorical",
+            "values": [
+                "Fully Furnished",
+                "Semi-Furnished",
+                "Unfurnished"
+            ]
+        },
+        "property_age": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 40.0,
+            "mean": 6.503341176470588
+        },
+        "parking_spaces": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 1.9176235294117647
+        },
+        "transaction_type": {
+            "type": "categorical",
+            "values": [
+                "New",
+                "Resale"
+            ]
+        }
+    }
+}

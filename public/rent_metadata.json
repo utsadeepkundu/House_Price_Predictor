@@ -1,0 +1,13 @@
+{
+    "model_name": "Rent Prediction",
+    "model_type": "Linear Regression",
+    "target": "rent",
+    "features": {
+        "area": {
+            "type": "numeric",
+            "min": 1200.0,
+            "max": 3500.0,
+            "mean": 2289.0
+        }
+    }
+}

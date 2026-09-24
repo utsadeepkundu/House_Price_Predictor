@@ -1,0 +1,656 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #17181c;
+  color: #f4f7fb;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  min-height: 100vh;
+  background: #17181c;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  height: 72px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(15, 16, 19, 0.92);
+  border-bottom: 1px solid #2e3036;
+
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #f4f7fb;
+  color: #17181c;
+
+  font-size: 20px;
+}
+
+.nav-status {
+  display: flex;
+  align-items: center;
+
+  color: #b5bbc7;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  margin-right: 8px;
+
+  border-radius: 50%;
+  background: #22c55e;
+
+  box-shadow:
+    0 0 12px rgba(34, 197, 94, 0.55);
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+
+  padding: 58px 0 70px;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+  max-width: 850px;
+  margin-bottom: 34px;
+}
+
+.hero-badge {
+  display: inline-flex;
+
+  margin-bottom: 18px;
+  padding: 8px 13px;
+
+  border: 1px solid #363a45;
+  border-radius: 999px;
+
+  background: #212329;
+  color: #bdc5ff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+
+  letter-spacing: -2.5px;
+}
+
+.hero h1 span {
+  color: #8b86ff;
+}
+
+.hero p {
+  max-width: 680px;
+
+  margin-top: 20px;
+
+  color: #aeb4bf;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   PREDICTION CARD
+========================================== */
+
+.prediction-card {
+  overflow: hidden;
+
+  background: #101114;
+
+  border: 1px solid #2c2e34;
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.28),
+    0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================
+   TABS
+========================================== */
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 6px;
+  padding: 10px;
+
+  border-bottom: 1px solid #2a2d33;
+  background: #15161a;
+}
+
+.tab {
+  padding: 14px 12px;
+
+  border: 1px solid transparent;
+  border-radius: 11px;
+
+  background: transparent;
+  color: #a7adb8;
+
+  cursor: pointer;
+
+  font-weight: 650;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tab:hover {
+  color: #f4f7fb;
+  background: #202228;
+}
+
+.tab.active {
+  background: #f4f7fb;
+  color: #17181c;
+}
+
+.tab:active {
+  transform: scale(0.985);
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-section {
+  padding: 30px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  font-size: 25px;
+  letter-spacing: -0.4px;
+}
+
+.section-title p {
+  margin: 8px 0 0;
+
+  color: #979eaa;
+  line-height: 1.5;
+}
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 21px;
+
+  margin-top: 30px;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 8px;
+}
+
+.input-group label {
+  color: #e7eaf0;
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #454852;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #292b30;
+  color: #f4f7fb;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: #858c99;
+}
+
+.input-group select {
+  cursor: pointer;
+}
+
+.input-group input:hover,
+.input-group select:hover {
+  background: #2d3036;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #817bff;
+
+  background: #2d3036;
+
+  box-shadow:
+    0 0 0 3px rgba(129, 123, 255, 0.13);
+}
+
+.input-group select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #202227;
+}
+
+.input-hint {
+  color: #777f8d;
+
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button-row {
+  display: grid;
+
+  grid-template-columns: 140px 1fr;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.reset-button,
+.predict-button {
+  padding: 15px;
+
+  border-radius: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.reset-button {
+  border: 1px solid #3b3e46;
+
+  background: #1e2025;
+  color: #d5dae3;
+}
+
+.reset-button:hover {
+  background: #26292f;
+}
+
+.predict-button {
+  border: none;
+
+  background: #736cff;
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(115, 108, 255, 0.2);
+}
+
+.predict-button:hover {
+  background: #625bf1;
+}
+
+.reset-button:active,
+.predict-button:active {
+  transform: scale(0.985);
+}
+
+.reset-button:disabled,
+.predict-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+  margin-top: 22px;
+  padding: 14px 16px;
+
+  border: 1px solid #632d38;
+  border-radius: 11px;
+
+  background: #27161b;
+  color: #ffb7c1;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.error-message strong {
+  color: #ff8e9d;
+}
+
+/* ==========================================
+   RESULT
+========================================== */
+
+.result-card {
+  margin-top: 28px;
+
+  padding: 32px 24px;
+
+  border: 1px solid #353845;
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1a1c22,
+      #14151a
+    );
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.result-label {
+  color: #8f97a5;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.result-card h2 {
+  margin: 11px 0 5px;
+
+  color: #9b96ff;
+
+  font-size: clamp(35px, 5vw, 48px);
+
+  letter-spacing: -1.3px;
+}
+
+.result-value {
+  color: #e0e4eb;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.result-note {
+  margin-top: 17px;
+
+  color: #7f8795;
+  font-size: 12px;
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status-panel {
+  min-height: 340px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 25px;
+
+  text-align: center;
+}
+
+.status-panel h2 {
+  margin: 18px 0 8px;
+  font-size: 23px;
+}
+
+.status-panel p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #9299a6;
+
+  line-height: 1.5;
+}
+
+.loader {
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid #363941;
+  border-top-color: #817bff;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+.error-panel {
+  color: #ffb7c1;
+}
+
+.secondary-button {
+  margin-top: 20px;
+
+  padding: 11px 18px;
+
+  border: 1px solid #4a4d56;
+  border-radius: 9px;
+
+  background: #22242a;
+  color: #f4f7fb;
+
+  cursor: pointer;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================
+   COMING SOON
+========================================== */
+
+.coming-soon {
+  min-height: 430px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 25px;
+
+  text-align: center;
+}
+
+.coming-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.coming-soon h2 {
+  margin: 0 0 10px;
+
+  font-size: 26px;
+}
+
+.coming-soon p {
+  max-width: 500px;
+
+  color: #9198a5;
+
+  line-height: 1.5;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+  padding: 25px;
+
+  text-align: center;
+
+  border-top: 1px solid #25272d;
+
+  color: #707784;
+
+  font-size: 13px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .nav-status {
+    display: none;
+  }
+
+  .container {
+    width: 94%;
+    padding-top: 35px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .result-card h2 {
+    font-size: 35px;
+  }
+}
