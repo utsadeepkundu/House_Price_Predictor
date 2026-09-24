@@ -1,8 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "fastapi",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "functions": {
     "app.py": {
       "includeFiles": "models/**/*.pkl"
